@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>ZealP 部落阁</title>
-  <subtitle>多思、寡言、少写</subtitle>
+  <title>ZealP&#39;s技术博客</title>
+  <subtitle>多思、寡言、极简</subtitle>
   <link href="/ZealP_Blog/atom.xml" rel="self"/>
   
   <link href="https://zealp.github.io/ZealP_Blog/"/>
