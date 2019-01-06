@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>ZEALP PERSONAL TECHNOLOGY COMMUNITY</title>
+  <title>ZEALP TECH COMMUNITY</title>
   <subtitle>多思、寡言、极简</subtitle>
   <link href="/ZealP_Blog/atom.xml" rel="self"/>
   
   <link href="https://zealp.github.io/ZealP_Blog/"/>
-  <updated>2019-01-06T07:13:43.879Z</updated>
+  <updated>2019-01-06T07:55:45.086Z</updated>
   <id>https://zealp.github.io/ZealP_Blog/</id>
   
   <author>
@@ -16,11 +16,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>2019 Kotlin Technology Stack (Code Chapter)</title>
+    <title>2019 Kotlin Technology Stack</title>
     <link href="https://zealp.github.io/ZealP_Blog/2019/01/05/2019KotlinTechnologyStack/"/>
     <id>https://zealp.github.io/ZealP_Blog/2019/01/05/2019KotlinTechnologyStack/</id>
     <published>2019-01-05T15:10:48.000Z</published>
-    <updated>2019-01-06T07:13:43.879Z</updated>
+    <updated>2019-01-06T07:55:45.086Z</updated>
     
     <content type="html"><![CDATA[<p>《2019 Kotlin Technology Stack》笔记集</p>
 <p>协程 Coroutine</p>
@@ -35,7 +35,7 @@
     </summary>
     
     
-      <category term="Kotlin 笔记" scheme="https://zealp.github.io/ZealP_Blog/tags/Kotlin-%E7%AC%94%E8%AE%B0/"/>
+      <category term="Kotlin" scheme="https://zealp.github.io/ZealP_Blog/tags/Kotlin/"/>
     
   </entry>
   
