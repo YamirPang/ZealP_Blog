@@ -5,7 +5,7 @@
   <link href="/ZealP_Blog/atom.xml" rel="self"/>
   
   <link href="https://zealp.github.io/ZealP_Blog/"/>
-  <updated>2019-01-14T16:38:19.762Z</updated>
+  <updated>2019-01-14T16:46:53.723Z</updated>
   <id>https://zealp.github.io/ZealP_Blog/</id>
   
   <author>
@@ -17,10 +17,10 @@
   
   <entry>
     <title>Kotlin设计模式之Builder模式</title>
-    <link href="https://zealp.github.io/ZealP_Blog/2019/01/15/kotlin%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8BBuilder%E6%A8%A1%E5%BC%8F/"/>
-    <id>https://zealp.github.io/ZealP_Blog/2019/01/15/kotlin设计模式之Builder模式/</id>
+    <link href="https://zealp.github.io/ZealP_Blog/2019/01/15/Kotlin%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8BBuilder%E6%A8%A1%E5%BC%8F/"/>
+    <id>https://zealp.github.io/ZealP_Blog/2019/01/15/Kotlin设计模式之Builder模式/</id>
     <published>2019-01-14T16:42:12.000Z</published>
-    <updated>2019-01-14T16:38:19.762Z</updated>
+    <updated>2019-01-14T16:46:53.723Z</updated>
     
     <content type="html"><![CDATA[<h2 id="Kotlin设计模式之Builder模式"><a href="#Kotlin设计模式之Builder模式" class="headerlink" title="Kotlin设计模式之Builder模式"></a>Kotlin设计模式之Builder模式</h2><h3 id="Builder模式介绍"><a href="#Builder模式介绍" class="headerlink" title="Builder模式介绍"></a>Builder模式介绍</h3><p>Builder模式是将一个复杂对象的创建与它的表示分离，使得同样的构建过程可以创建不同的表示。因为一个复杂的对象由大量的组件组成，为了在构建过程中对外部隐藏实现细节，使用Builder模式将部件和组装分离，使得构建过程和部件都可以自由扩展，两者之间的耦合能降到最低。</p>
 <p>Builder模式的使用场景：</p>
@@ -56,10 +56,10 @@
   
   <entry>
     <title>Kotlin设计模式之单例模式</title>
-    <link href="https://zealp.github.io/ZealP_Blog/2019/01/12/kotlin%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/"/>
-    <id>https://zealp.github.io/ZealP_Blog/2019/01/12/kotlin设计模式之单例模式/</id>
+    <link href="https://zealp.github.io/ZealP_Blog/2019/01/12/Kotlin%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/"/>
+    <id>https://zealp.github.io/ZealP_Blog/2019/01/12/Kotlin设计模式之单例模式/</id>
     <published>2019-01-12T05:42:12.000Z</published>
-    <updated>2019-01-14T16:37:34.167Z</updated>
+    <updated>2019-01-14T16:47:05.046Z</updated>
     
     <content type="html"><![CDATA[<h2 id="Kotlin设计模式之单例模式"><a href="#Kotlin设计模式之单例模式" class="headerlink" title="Kotlin设计模式之单例模式"></a>Kotlin设计模式之单例模式</h2><h3 id="单例模式介绍"><a href="#单例模式介绍" class="headerlink" title="单例模式介绍"></a>单例模式介绍</h3><p>单例模式在日常开发中是非常常见的写法，一般常见于全局只需要类保有一个对象实例用于使用的情景.避免了产生多个对象消耗过多的资源，或某种类型对象只应该有且只有一个。一般一个对象需要消耗的资源过多，比如访问IO和数据库等资源时就要考虑使用单例模式。</p>
 <p>单例模式实现的要点是:<br>1.构造函数私有化，不对外开放<br>2.通过静态方法getInstance()或者枚举返回单例对象<br>3.确保在多线程环境下单例类对象有且只有一个<br>4.确保单例类对象在反序列化时不会重新构建对象</p>
@@ -120,11 +120,11 @@
     <link href="https://zealp.github.io/ZealP_Blog/2019/01/05/2019KotlinTechnologyStack/"/>
     <id>https://zealp.github.io/ZealP_Blog/2019/01/05/2019KotlinTechnologyStack/</id>
     <published>2019-01-05T15:10:48.000Z</published>
-    <updated>2019-01-14T16:39:28.568Z</updated>
+    <updated>2019-01-14T16:46:41.638Z</updated>
     
     <content type="html"><![CDATA[<h2 id="《2019-Kotlin-Technology-Stack》笔记集之设计模式"><a href="#《2019-Kotlin-Technology-Stack》笔记集之设计模式" class="headerlink" title="《2019 Kotlin Technology Stack》笔记集之设计模式"></a>《2019 Kotlin Technology Stack》笔记集之设计模式</h2><p><a href="https://zealp.github.io/ZealP_Blog/2019/01/12/%E7%81%B5%E6%B4%BB%E5%BC%80%E5%8F%91%E4%B9%8B%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%85%AD%E5%A4%A7%E5%8E%9F%E5%88%99/">灵活开发之面向对象的六大原则</a></p>
-<p><a href="https://zealp.github.io/ZealP_Blog/2019/01/12/kotlin%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/">Kotlin设计模式之单例模式</a></p>
-<p><a href="https://zealp.github.io/ZealP_Blog/2019/01/15/kotlin%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/">Kotlin设计模式之Builder模式</a></p>
+<p><a href="https://zealp.github.io/ZealP_Blog/2019/01/12/Kotlin%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/">Kotlin设计模式之单例模式</a></p>
+<p><a href="https://zealp.github.io/ZealP_Blog/2019/01/15/Kotlin%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8BBuilder%E6%A8%A1%E5%BC%8F/">Kotlin设计模式之Builder模式</a></p>
 ]]></content>
     
     <summary type="html">
