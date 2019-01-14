@@ -3,7 +3,7 @@
         <meta charset="utf-8">
             
             <title>
-                kotlin设计模式之Builder模式 | ZEALP TECH COMMUNITY
+                Kotlin设计模式之Builder模式 | ZEALP TECH COMMUNITY
             </title>
             <meta content="width=device-width, initial-scale=1" name="viewport">
             <meta name="theme-color" content="#4184f3">
@@ -115,10 +115,10 @@
           <header class="post-header">
           
           </header>
-          <h1 class="post-title">kotlin设计模式之Builder模式</h1>
+          <h1 class="post-title">Kotlin设计模式之Builder模式</h1>
 
           <section class="post-info">
-            <span class="post-date">2019/01/12</span>
+            <span class="post-date">2019/01/15</span>
             
             
             <span class="post-tags">
@@ -128,7 +128,7 @@
           </section>
 
           <section class="post-content">
-            <h2 id="kotlin设计模式之Builder模式"><a href="#kotlin设计模式之Builder模式" class="headerlink" title="kotlin设计模式之Builder模式"></a>kotlin设计模式之Builder模式</h2><h3 id="Builder模式介绍"><a href="#Builder模式介绍" class="headerlink" title="Builder模式介绍"></a>Builder模式介绍</h3><p>Builder模式是将一个复杂对象的创建与它的表示分离，使得同样的构建过程可以创建不同的表示。因为一个复杂的对象由大量的组件组成，为了在构建过程中对外部隐藏实现细节，使用Builder模式将部件和组装分离，使得构建过程和部件都可以自由扩展，两者之间的耦合能降到最低。</p>
+            <h2 id="Kotlin设计模式之Builder模式"><a href="#Kotlin设计模式之Builder模式" class="headerlink" title="Kotlin设计模式之Builder模式"></a>Kotlin设计模式之Builder模式</h2><h3 id="Builder模式介绍"><a href="#Builder模式介绍" class="headerlink" title="Builder模式介绍"></a>Builder模式介绍</h3><p>Builder模式是将一个复杂对象的创建与它的表示分离，使得同样的构建过程可以创建不同的表示。因为一个复杂的对象由大量的组件组成，为了在构建过程中对外部隐藏实现细节，使用Builder模式将部件和组装分离，使得构建过程和部件都可以自由扩展，两者之间的耦合能降到最低。</p>
 <p>Builder模式的使用场景：</p>
 <ol>
 <li>相同的方法，不同的执行顺序，产生不同的事件结果时使用。</li>
@@ -142,12 +142,10 @@
 <p>具体调用的代码:</p>
 <figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">fun</span> <span class="title">robotBuild</span><span class="params">()</span></span> &#123;</div><div class="line">        <span class="keyword">val</span> factory = RobotFactory()</div><div class="line">        <span class="keyword">val</span> robotConfig = RobotDynamicConfig</div><div class="line">                .Builder</div><div class="line">                .setMainArms(<span class="string">"电磁炮（ElectricGun)"</span>)</div><div class="line">                .setViceArms(<span class="string">"粒子光束（ParticleBeam）"</span>)</div><div class="line">                .setMaterial(<span class="string">"石墨烯(Graphene)"</span>)</div><div class="line">                .setEnergy(<span class="string">"零点能"</span>)</div><div class="line">                .build()</div><div class="line">        factory.setRobotDynamicConfig(robotConfig)</div><div class="line">        factory.getRobotInfo()</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>运行的结果:</p>
-<ul>
-<li>输出 : “工厂当前生产的是战争机器人是个非常厉害的杀人机器,它配备的主武器和副武器分别为电磁炮（ElectricGun)和粒子光束（ParticleBeam），它全身使用的材质主要为行业最新科技石墨烯(Graphene)，它的能量核心使用的是零点能，您觉得还满意吗？”</li>
-</ul>
 <blockquote>
-<p>代码的重点在Build类中，这是实现链式调用的实现写法。</p>
+<p>输出 : “工厂当前生产的是战争机器人是个非常厉害的杀人机器,它配备的主武器和副武器分别为电磁炮（ElectricGun)和粒子光束（ParticleBeam），它全身使用的材质主要为行业最新科技石墨烯(Graphene)，它的能量核心使用的是零点能，您觉得还满意吗？”</p>
 </blockquote>
+<p>代码的重点在Build类中，这是实现链式调用的实现写法。</p>
 <p><em>本文来自阅读《Android Source Design Patterns Analysis &amp; Practice》书籍的笔记</em></p>
 
           </section>
@@ -160,7 +158,7 @@
           
             <a class="post-next pager-item" href="/ZealP_Blog/2019/01/12/kotlin设计模式之单例模式/">
               <strong class="article-nav-caption">下一篇</strong>
-              <p class="post-nav-title">kotlin设计模式之单例模式</p>
+              <p class="post-nav-title">Kotlin设计模式之单例模式</p>
             </a>
           
         </div>
@@ -172,7 +170,7 @@
     
 
     <!-- 多说评论框 start -->
-      <div class="ds-thread" data-thread-key="_posts/kotlin设计模式之Builder模式.md" data-title="kotlin设计模式之Builder模式" data-url="https://zealp.github.io/ZealP_Blog/ZealP_Blog/2019/01/12/kotlin设计模式之Builder模式/"></div>
+      <div class="ds-thread" data-thread-key="_posts/kotlin设计模式之Builder模式.md" data-title="Kotlin设计模式之Builder模式" data-url="https://zealp.github.io/ZealP_Blog/ZealP_Blog/2019/01/15/kotlin设计模式之Builder模式/"></div>
     <!-- 多说评论框 end -->
     <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
       <script type="text/javascript">
