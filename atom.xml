@@ -5,7 +5,7 @@
   <link href="/ZealP_Blog/atom.xml" rel="self"/>
   
   <link href="https://zealp.github.io/ZealP_Blog/"/>
-  <updated>2019-01-14T16:46:53.723Z</updated>
+  <updated>2019-01-14T16:50:59.091Z</updated>
   <id>https://zealp.github.io/ZealP_Blog/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="https://zealp.github.io/ZealP_Blog/2019/01/15/Kotlin%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8BBuilder%E6%A8%A1%E5%BC%8F/"/>
     <id>https://zealp.github.io/ZealP_Blog/2019/01/15/Kotlin设计模式之Builder模式/</id>
     <published>2019-01-14T16:42:12.000Z</published>
-    <updated>2019-01-14T16:46:53.723Z</updated>
+    <updated>2019-01-14T16:50:59.091Z</updated>
     
     <content type="html"><![CDATA[<h2 id="Kotlin设计模式之Builder模式"><a href="#Kotlin设计模式之Builder模式" class="headerlink" title="Kotlin设计模式之Builder模式"></a>Kotlin设计模式之Builder模式</h2><h3 id="Builder模式介绍"><a href="#Builder模式介绍" class="headerlink" title="Builder模式介绍"></a>Builder模式介绍</h3><p>Builder模式是将一个复杂对象的创建与它的表示分离，使得同样的构建过程可以创建不同的表示。因为一个复杂的对象由大量的组件组成，为了在构建过程中对外部隐藏实现细节，使用Builder模式将部件和组装分离，使得构建过程和部件都可以自由扩展，两者之间的耦合能降到最低。</p>
 <p>Builder模式的使用场景：</p>
@@ -50,7 +50,7 @@
     </summary>
     
     
-      <category term="Kotlin" scheme="https://zealp.github.io/ZealP_Blog/tags/Kotlin/"/>
+      <category term="Kotlin设计模式" scheme="https://zealp.github.io/ZealP_Blog/tags/Kotlin%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
     
   </entry>
   
@@ -59,7 +59,7 @@
     <link href="https://zealp.github.io/ZealP_Blog/2019/01/12/Kotlin%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/"/>
     <id>https://zealp.github.io/ZealP_Blog/2019/01/12/Kotlin设计模式之单例模式/</id>
     <published>2019-01-12T05:42:12.000Z</published>
-    <updated>2019-01-14T16:47:05.046Z</updated>
+    <updated>2019-01-14T16:50:42.246Z</updated>
     
     <content type="html"><![CDATA[<h2 id="Kotlin设计模式之单例模式"><a href="#Kotlin设计模式之单例模式" class="headerlink" title="Kotlin设计模式之单例模式"></a>Kotlin设计模式之单例模式</h2><h3 id="单例模式介绍"><a href="#单例模式介绍" class="headerlink" title="单例模式介绍"></a>单例模式介绍</h3><p>单例模式在日常开发中是非常常见的写法，一般常见于全局只需要类保有一个对象实例用于使用的情景.避免了产生多个对象消耗过多的资源，或某种类型对象只应该有且只有一个。一般一个对象需要消耗的资源过多，比如访问IO和数据库等资源时就要考虑使用单例模式。</p>
 <p>单例模式实现的要点是:<br>1.构造函数私有化，不对外开放<br>2.通过静态方法getInstance()或者枚举返回单例对象<br>3.确保在多线程环境下单例类对象有且只有一个<br>4.确保单例类对象在反序列化时不会重新构建对象</p>
@@ -81,7 +81,7 @@
     </summary>
     
     
-      <category term="Kotlin" scheme="https://zealp.github.io/ZealP_Blog/tags/Kotlin/"/>
+      <category term="Kotlin设计模式" scheme="https://zealp.github.io/ZealP_Blog/tags/Kotlin%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
     
   </entry>
   
@@ -90,7 +90,7 @@
     <link href="https://zealp.github.io/ZealP_Blog/2019/01/12/%E7%81%B5%E6%B4%BB%E5%BC%80%E5%8F%91%E4%B9%8B%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%85%AD%E5%A4%A7%E5%8E%9F%E5%88%99/"/>
     <id>https://zealp.github.io/ZealP_Blog/2019/01/12/灵活开发之面向对象的六大原则/</id>
     <published>2019-01-12T05:24:45.000Z</published>
-    <updated>2019-01-14T14:24:17.589Z</updated>
+    <updated>2019-01-14T16:50:53.429Z</updated>
     
     <content type="html"><![CDATA[<h2 id="灵活开发之面向对象的六大原则（SOLID原则-迪米特原则）"><a href="#灵活开发之面向对象的六大原则（SOLID原则-迪米特原则）" class="headerlink" title="灵活开发之面向对象的六大原则（SOLID原则 + 迪米特原则）"></a>灵活开发之面向对象的六大原则（SOLID原则 + 迪米特原则）</h2><h3 id="单一职责原则-让代码更清晰"><a href="#单一职责原则-让代码更清晰" class="headerlink" title="单一职责原则-让代码更清晰"></a>单一职责原则-让代码更清晰</h3><p>单一职责原则(Single Responsibility Principle)，简单来说一个类，一个函数只对应一种职责，只做一类事情。例如一个类里面不能包含多个完全不同类型功能的代码，同一个类应该保证方法对应的功能相关性高。但是单一职责原则划分界限不清晰，很多时候需要根据个人经验或者具体业务逻辑来界定。</p>
 <h3 id="开闭原则-让程序更灵活、稳定"><a href="#开闭原则-让程序更灵活、稳定" class="headerlink" title="开闭原则-让程序更灵活、稳定"></a>开闭原则-让程序更灵活、稳定</h3><p>开闭原则(Open Close Principle)的定义是软件中的对象(类、模块、函数等)应对于扩展是开放的，对于修改是关闭的，也就是说编写代码的时候应该以编写新的扩展功能来替代在原代码上直接修改这种行为，因为软件的生命周期里出现变化、升级和维护都是必不可少的情况，直接在原代码基础上修改可能将原本无问题的代码引入错误进来，导致系统异常或者不稳定等情况。</p>
@@ -111,7 +111,7 @@
     </summary>
     
     
-      <category term="开发原则" scheme="https://zealp.github.io/ZealP_Blog/tags/%E5%BC%80%E5%8F%91%E5%8E%9F%E5%88%99/"/>
+      <category term="Kotlin设计模式" scheme="https://zealp.github.io/ZealP_Blog/tags/Kotlin%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
     
   </entry>
   
@@ -120,11 +120,11 @@
     <link href="https://zealp.github.io/ZealP_Blog/2019/01/05/2019KotlinTechnologyStack/"/>
     <id>https://zealp.github.io/ZealP_Blog/2019/01/05/2019KotlinTechnologyStack/</id>
     <published>2019-01-05T15:10:48.000Z</published>
-    <updated>2019-01-14T16:46:41.638Z</updated>
+    <updated>2019-01-14T16:52:27.175Z</updated>
     
     <content type="html"><![CDATA[<h2 id="《2019-Kotlin-Technology-Stack》笔记集之设计模式"><a href="#《2019-Kotlin-Technology-Stack》笔记集之设计模式" class="headerlink" title="《2019 Kotlin Technology Stack》笔记集之设计模式"></a>《2019 Kotlin Technology Stack》笔记集之设计模式</h2><p><a href="https://zealp.github.io/ZealP_Blog/2019/01/12/%E7%81%B5%E6%B4%BB%E5%BC%80%E5%8F%91%E4%B9%8B%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%85%AD%E5%A4%A7%E5%8E%9F%E5%88%99/">灵活开发之面向对象的六大原则</a></p>
 <p><a href="https://zealp.github.io/ZealP_Blog/2019/01/12/Kotlin%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/">Kotlin设计模式之单例模式</a></p>
-<p><a href="https://zealp.github.io/ZealP_Blog/2019/01/15/Kotlin%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8BBuilder%E6%A8%A1%E5%BC%8F/">Kotlin设计模式之Builder模式</a></p>
+<p><a href="https://zealp.github.io/ZealP_Blog/2019/01/15/kotlin%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8BBuilder%E6%A8%A1%E5%BC%8F/">Kotlin设计模式之Builder模式</a></p>
 ]]></content>
     
     <summary type="html">
@@ -134,7 +134,7 @@
     </summary>
     
     
-      <category term="Kotlin" scheme="https://zealp.github.io/ZealP_Blog/tags/Kotlin/"/>
+      <category term="Kotlin Tech Stack" scheme="https://zealp.github.io/ZealP_Blog/tags/Kotlin-Tech-Stack/"/>
     
   </entry>
   
