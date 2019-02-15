@@ -59,7 +59,7 @@
     <link href="https://zealp.github.io/ZealP_Blog/2019/01/12/kotlin%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/"/>
     <id>https://zealp.github.io/ZealP_Blog/2019/01/12/kotlin设计模式之单例模式/</id>
     <published>2019-01-12T05:42:12.000Z</published>
-    <updated>2019-01-14T17:13:29.823Z</updated>
+    <updated>2019-02-15T13:49:08.489Z</updated>
     
     <content type="html"><![CDATA[<h2 id="Kotlin设计模式之单例模式"><a href="#Kotlin设计模式之单例模式" class="headerlink" title="Kotlin设计模式之单例模式"></a>Kotlin设计模式之单例模式</h2><h3 id="单例模式介绍"><a href="#单例模式介绍" class="headerlink" title="单例模式介绍"></a>单例模式介绍</h3><p>单例模式在日常开发中是非常常见的写法，一般常见于全局只需要类保有一个对象实例用于使用的情景.避免了产生多个对象消耗过多的资源，或某种类型对象只应该有且只有一个。一般一个对象需要消耗的资源过多，比如访问IO和数据库等资源时就要考虑使用单例模式。</p>
 <p>单例模式实现的要点是:<br>1.构造函数私有化，不对外开放<br>2.通过静态方法getInstance()或者枚举返回单例对象<br>3.确保在多线程环境下单例类对象有且只有一个<br>4.确保单例类对象在反序列化时不会重新构建对象</p>
