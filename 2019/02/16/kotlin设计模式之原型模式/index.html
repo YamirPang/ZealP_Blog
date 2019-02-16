@@ -112,13 +112,13 @@
     <div class="main">
         <article>
           
-          <header class="post-header with-cover" style="background-image:url('/ZealP_Blog/2019/01/12/kotlin设计模式之原型模式/kotlin_prototype.png')" >
+          <header class="post-header with-cover" style="background-image:url('/ZealP_Blog/2019/02/16/kotlin设计模式之原型模式/kotlin_prototype.png')" >
           
           </header>
           <h1 class="post-title">Kotlin设计模式之原型模式</h1>
 
           <section class="post-info">
-            <span class="post-date">2019/01/12</span>
+            <span class="post-date">2019/02/16</span>
             
             
             <span class="post-tags">
@@ -136,9 +136,7 @@
 <li>一个对象需要提供给其他对象访问，并且各调用者可能需要更改其值得时候，可考虑使用原型模式拷贝多个对象供调用者使用，即保护性拷贝</li>
 </ol>
 <blockquote>
-<blockquote>
 <p>注意: 实现Cloneable接口的原型模式调用clone时并不一定比new操作快，只有创建对象耗时或成本较高时通过clone方法才有效率效果，所以使用模式时需要思考是否有使用的必要。</p>
-</blockquote>
 </blockquote>
 <h3 id="原型模式下有两种拷贝模式-浅拷贝和深拷贝"><a href="#原型模式下有两种拷贝模式-浅拷贝和深拷贝" class="headerlink" title="原型模式下有两种拷贝模式(浅拷贝和深拷贝)"></a>原型模式下有两种拷贝模式(浅拷贝和深拷贝)</h3><h4 id="浅拷贝"><a href="#浅拷贝" class="headerlink" title="浅拷贝"></a>浅拷贝</h4><p>浅拷贝也叫影子拷贝，是将原始对象里的所有字段对应数据地址引入到克隆对象字段里，因为是数据地址克隆过来，所以浅拷贝出来的对象的值如果更改，原型对象值也会变动，同理原型对象如果值变更了，其克隆出来的对象的值也会出现变化。</p>
 <p>下面是浅拷贝的代码实现</p>
@@ -162,15 +160,10 @@
        
         <div class="pager">
           
-            <a class="post-prev pager-item" href="/ZealP_Blog/2019/01/15/kotlin设计模式之Builder模式/" >
-              <strong class="article-nav-caption">上一篇</strong>
-              <p class="post-nav-title">Kotlin设计模式之Builder模式</p>
-            </a>
           
-          
-            <a class="post-next pager-item" href="/ZealP_Blog/2019/01/12/kotlin设计模式之单例模式/">
+            <a class="post-next pager-item" href="/ZealP_Blog/2019/01/15/kotlin设计模式之Builder模式/">
               <strong class="article-nav-caption">下一篇</strong>
-              <p class="post-nav-title">Kotlin设计模式之单例模式</p>
+              <p class="post-nav-title">Kotlin设计模式之Builder模式</p>
             </a>
           
         </div>
@@ -182,7 +175,7 @@
     
 
     <!-- 多说评论框 start -->
-      <div class="ds-thread" data-thread-key="_posts/kotlin设计模式之原型模式.md" data-title="Kotlin设计模式之原型模式" data-url="https://zealp.github.io/ZealP_Blog/ZealP_Blog/2019/01/12/kotlin设计模式之原型模式/"></div>
+      <div class="ds-thread" data-thread-key="_posts/kotlin设计模式之原型模式.md" data-title="Kotlin设计模式之原型模式" data-url="https://zealp.github.io/ZealP_Blog/ZealP_Blog/2019/02/16/kotlin设计模式之原型模式/"></div>
     <!-- 多说评论框 end -->
     <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
       <script type="text/javascript">
