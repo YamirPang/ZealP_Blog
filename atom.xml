@@ -64,9 +64,9 @@
     <link href="https://zealp.github.io/ZealP_Blog/2019/01/15/kotlin%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8BBuilder%E6%A8%A1%E5%BC%8F/"/>
     <id>https://zealp.github.io/ZealP_Blog/2019/01/15/kotlin设计模式之Builder模式/</id>
     <published>2019-01-14T16:42:12.000Z</published>
-    <updated>2019-03-14T06:42:20.963Z</updated>
+    <updated>2019-03-14T06:50:39.878Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="Kotlin设计模式之Builder模式"><a href="#Kotlin设计模式之Builder模式" class="headerlink" title="Kotlin设计模式之Builder模式"></a>Kotlin设计模式之Builder模式</h2><h3 id="Builder模式介绍"><a href="#Builder模式介绍" class="headerlink" title="Builder模式介绍"></a>Builder模式介绍</h3><p>Builder模式是将一个复杂对象的创建与它的表示分离，使得同样的构建过程可以创建不同的表示。因为一个复杂的对象由大量的组件组成，为了在构建过程中对外部隐藏实现细节，使用Builder模式将部件和组装分离，使得构建过程和部件都可以自由扩展，两者之间的耦合能降到最低。</p>
+    <content type="html"><![CDATA[<h3 id="Builder模式介绍"><a href="#Builder模式介绍" class="headerlink" title="Builder模式介绍"></a>Builder模式介绍</h3><p>Builder模式是将一个复杂对象的创建与它的表示分离，使得同样的构建过程可以创建不同的表示。因为一个复杂的对象由大量的组件组成，为了在构建过程中对外部隐藏实现细节，使用Builder模式将部件和组装分离，使得构建过程和部件都可以自由扩展，两者之间的耦合能降到最低。</p>
 <p>Builder模式的使用场景：</p>
 <ol>
 <li>相同的方法，不同的执行顺序，产生不同的事件结果时使用。</li>
@@ -89,7 +89,7 @@
     
     <summary type="html">
     
-      &lt;h2 id=&quot;Kotlin设计模式之Builder模式&quot;&gt;&lt;a href=&quot;#Kotlin设计模式之Builder模式&quot; class=&quot;headerlink&quot; title=&quot;Kotlin设计模式之Builder模式&quot;&gt;&lt;/a&gt;Kotlin设计模式之Builder模式&lt;/h2&gt;&lt;
+      &lt;h3 id=&quot;Builder模式介绍&quot;&gt;&lt;a href=&quot;#Builder模式介绍&quot; class=&quot;headerlink&quot; title=&quot;Builder模式介绍&quot;&gt;&lt;/a&gt;Builder模式介绍&lt;/h3&gt;&lt;p&gt;Builder模式是将一个复杂对象的创建与它的表示分离，使得同样的构
     
     </summary>
     
