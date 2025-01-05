@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文章 - Yamir.Pang</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- 新增文章页面样式 -->
+    <link rel="stylesheet" href="articles.css">
+</head>
+<body>
+    <!-- 复用主页的导航栏 -->
+    <nav class="main-nav">
+        <div class="logo">
+            <h1>Yamir.Pang</h1>
+        </div>
+        <button class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-links">
+            <li><a href="index.html">主页</a></li>
+            <li><a href="articles.html" class="active">文章</a></li>
+            <li><a href="#about">关于</a></li>
+            <li><a href="https://github.com/YourUsername" target="_blank">GitHub</a></li>
+        </ul>
+        <div class="nav-overlay"></div>
+    </nav>
+
+    <!-- 文章页面主体内容 -->
+    <main class="articles-container">
+        <header class="articles-header">
+            <h1>文章</h1>
+            <p>探索AI与未来科技的无限可能，分享前沿技术与创新思维。</p>
+        </header>
+
+        <div class="filter-section">
+            <div class="filter-header">
+                <h3>文章列表</h3>
+                <button class="filter-toggle" aria-label="展开筛选">
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+            </div>
+            <div class="filter-content">
+                <div class="filter-row">
+                    <div class="filter-item">
+                        <span class="filter-label">文章类型</span>
+                        <select class="filter-input">
+                            <option value="all">全部</option>
+                            <option value="featured">精选</option>
+                            <option value="normal">普通</option>
+                        </select>
+                    </div>
+                    <div class="filter-item">
+                        <span class="filter-label">关键词</span>
+                        <input type="text" class="filter-input search-input" placeholder="搜索文章...">
+                    </div>
+                    <div class="filter-item">
+                        <span class="filter-label">发布时间</span>
+                        <select class="filter-input">
+                            <option value="all">全部时间</option>
+                            <option value="week">最近一周</option>
+                            <option value="month">最近一月</option>
+                            <option value="year">最近一年</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="filter-row">
+                    <div class="filter-item">
+                        <span class="filter-label">标签分类</span>
+                        <div class="tags-container">
+                            <span class="tag-item active">全部</span>
+                            <span class="tag-item">人工智能</span>
+                            <span class="tag-item">前沿科技</span>
+                            <span class="tag-item">未来展望</span>
+                            <span class="tag-item">创新思维</span>
+                            <span class="tag-item">深度学习</span>
+                            <span class="tag-item">机器学习</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="articles-grid">
+            <article class="article-card">
+                <div class="article-content">
+                    <h2>出发，向着未来一路狂奔吧</h2>
+                    <p class="article-description">已经没有退路了，请奋力一搏。探索人工智能的前沿发展，展望未来科技的无限可能。在这个快速变革的时代，我们需要保持开放和进取的心态。</p>
+                    <div class="article-meta">
+                        <span class="article-date">2024-03-21</span>
+                        <span class="article-tag featured">精选</span>
+                        <span class="article-tag">人工智能</span>
+                    </div>
+                </div>
+                <div class="article-image" data-src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3"></div>
+            </article>
+
+            <article class="article-card">
+                <div class="article-content">
+                    <h2>深度学习：解码人工智能的未来</h2>
+                    <p class="article-description">深度学习正在重塑我们的世界。从计算机视觉到自然语言处理，AI技术正在各个领域展现其强大潜力。本文深入探讨最新的深度学习突破和应用。</p>
+                    <div class="article-meta">
+                        <span class="article-date">2024-03-18</span>
+                        <span class="article-tag">深度学习</span>
+                        <span class="article-tag">技术前沿</span>
+                    </div>
+                </div>
+                <div class="article-image" data-src="https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3"></div>
+            </article>
+
+            <article class="article-card">
+                <div class="article-content">
+                    <h2>机器学习工程实践：从理论到落地</h2>
+                    <p class="article-description">如何将机器学习模型从实验室带到现实世界？本文分享一线工程师的实战经验，探讨模型部署、性能优化、监控维护等关键话题。</p>
+                    <div class="article-meta">
+                        <span class="article-date">2024-03-15</span>
+                        <span class="article-tag featured">精选</span>
+                        <span class="article-tag">机器学习</span>
+                    </div>
+                </div>
+                <div class="article-image" data-src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3"></div>
+            </article>
+
+            <article class="article-card">
+                <div class="article-content">
+                    <h2>2024年AI技术趋势展望</h2>
+                    <p class="article-description">随着大语言模型的突破，AI技术正在进入新纪元。本文分析2024年人工智能领域的关键趋势，探讨未来发展方向。</p>
+                    <div class="article-meta">
+                        <span class="article-date">2024-03-10</span>
+                        <span class="article-tag">前沿科技</span>
+                        <span class="article-tag">未来展望</span>
+                    </div>
+                </div>
+                <div class="article-image" data-src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3"></div>
+            </article>
+
+            <article class="article-card">
+                <div class="article-content">
+                    <h2>AI驱动的创新：改变世界的力量</h2>
+                    <p class="article-description">人工智能正在各个领域催生创新。从医疗诊断到智能制造，从金融科技到教育革新，AI技术正在重塑我们的生活方式。</p>
+                    <div class="article-meta">
+                        <span class="article-date">2024-03-05</span>
+                        <span class="article-tag">创新思维</span>
+                        <span class="article-tag">人工智能</span>
+                    </div>
+                </div>
+                <div class="article-image" data-src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3"></div>
+            </article>
+
+            <article class="article-card">
+                <div class="article-content">
+                    <h2>大模型时代的算力革命</h2>
+                    <p class="article-description">随着AI模型规模的不断扩大，算力需求呈指数级增长。本文探讨新一代AI芯片技术和分布式计算解决方案。</p>
+                    <div class="article-meta">
+                        <span class="article-date">2024-03-01</span>
+                        <span class="article-tag">技术前沿</span>
+                        <span class="article-tag">人工智能</span>
+                    </div>
+                </div>
+                <div class="article-image" data-src="https://images.unsplash.com/photo-1518432031352-d6fc5c10da5a?ixlib=rb-4.0.3"></div>
+            </article>
+
+            <article class="article-card">
+                <div class="article-content">
+                    <h2>量子计算与AI的完美融合</h2>
+                    <p class="article-description">量子计算机的发展将如何影响AI领域？本文探讨量子机器学习的最新进展，以及它可能带来的革命性变化。</p>
+                    <div class="article-meta">
+                        <span class="article-date">2024-02-28</span>
+                        <span class="article-tag featured">精选</span>
+                        <span class="article-tag">前沿科技</span>
+                    </div>
+                </div>
+                <div class="article-image" data-src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3"></div>
+            </article>
+
+            <article class="article-card">
+                <div class="article-content">
+                    <h2>AI安全：构建可信赖的人工智能</h2>
+                    <p class="article-description">随着AI系统变得越来越复杂，如何确保其安全性和可控性？深入探讨AI安全研究的关键议题。</p>
+                    <div class="article-meta">
+                        <span class="article-date">2024-02-25</span>
+                        <span class="article-tag">人工智能</span>
+                        <span class="article-tag">技术前沿</span>
+                    </div>
+                </div>
+                <div class="article-image" data-src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3"></div>
+            </article>
+
+            <article class="article-card">
+                <div class="article-content">
+                    <h2>自动驾驶的新纪元：AI决策系统</h2>
+                    <p class="article-description">自动驾驶技术正在经历重大突破，AI决策系统的进步让无人驾驶离现实更近一步。</p>
+                    <div class="article-meta">
+                        <span class="article-date">2024-02-22</span>
+                        <span class="article-tag">人工智能</span>
+                        <span class="article-tag">创新应用</span>
+                    </div>
+                </div>
+                <div class="article-image" data-src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?ixlib=rb-4.0.3"></div>
+            </article>
+
+            <article class="article-card">
+                <div class="article-content">
+                    <h2>AI艺术创作：打破传统边界</h2>
+                    <p class="article-description">人工智能正在重新定义艺术创作。从图像生成到音乐创作，AI正在展现惊人的创造力。</p>
+                    <div class="article-meta">
+                        <span class="article-date">2024-02-18</span>
+                        <span class="article-tag featured">精选</span>
+                        <span class="article-tag">创新思维</span>
+                    </div>
+                </div>
+                <div class="article-image" data-src="https://images.unsplash.com/photo-1547826039-bfc35e0f1ea8?ixlib=rb-4.0.3"></div>
+            </article>
+
+            <article class="article-card">
+                <div class="article-content">
+                    <h2>边缘计算：AI的下一个战场</h2>
+                    <p class="article-description">边缘计算如何改变AI应用的部署方式？探讨实时AI处理和本地化AI解决方案。</p>
+                    <div class="article-meta">
+                        <span class="article-date">2024-02-15</span>
+                        <span class="article-tag">技术前沿</span>
+                        <span class="article-tag">未来展望</span>
+                    </div>
+                </div>
+                <div class="article-image" data-src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3"></div>
+            </article>
+
+            <article class="article-card">
+                <div class="article-content">
+                    <h2>AI医疗：精准诊断的新时代</h2>
+                    <p class="article-description">人工智能在医疗领域的应用正在改变传统诊疗模式，带来更精准、高效的医疗服务。</p>
+                    <div class="article-meta">
+                        <span class="article-date">2024-02-12</span>
+                        <span class="article-tag">医疗AI</span>
+                        <span class="article-tag">创新应用</span>
+                    </div>
+                </div>
+                <div class="article-image" data-src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-4.0.3"></div>
+            </article>
+
+            <article class="article-card">
+                <div class="article-content">
+                    <h2>AI教育革命：个性化学习时代</h2>
+                    <p class="article-description">AI如何改变教育方式？探讨智能教育系统如何实现真正的个性化学习体验。</p>
+                    <div class="article-meta">
+                        <span class="article-date">2024-02-08</span>
+                        <span class="article-tag">教育科技</span>
+                        <span class="article-tag">创新思维</span>
+                    </div>
+                </div>
+                <div class="article-image" data-src="https://images.unsplash.com/photo-1509062522246-3755977927d7?ixlib=rb-4.0.3"></div>
+            </article>
+
+            <article class="article-card">
+                <div class="article-content">
+                    <h2>AI伦理：技术发展的道德指南</h2>
+                    <p class="article-description">随着AI技术的快速发展，如何确保其符合伦理标准？探讨AI伦理准则的制定与实施。</p>
+                    <div class="article-meta">
+                        <span class="article-date">2024-02-05</span>
+                        <span class="article-tag featured">精选</span>
+                        <span class="article-tag">AI伦理</span>
+                    </div>
+                </div>
+                <div class="article-image" data-src="https://images.unsplash.com/photo-1507146426996-ef05306b995a?ixlib=rb-4.0.3"></div>
+            </article>
+
+            <article class="article-card">
+                <div class="article-content">
+                    <h2>AI与可持续发展：科技向善</h2>
+                    <p class="article-description">人工智能如何助力环境保护和可持续发展？探讨AI在气候变化、能源效率等领域的应用。</p>
+                    <div class="article-meta">
+                        <span class="article-date">2024-02-02</span>
+                        <span class="article-tag">可持续发展</span>
+                        <span class="article-tag">创新应用</span>
+                    </div>
+                </div>
+                <div class="article-image" data-src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?ixlib=rb-4.0.3"></div>
+            </article>
+
+            <article class="article-card">
+                <div class="article-content">
+                    <h2>AI语言模型：突破与局限</h2>
+                    <p class="article-description">大型语言模型的发展现状如何？探讨其能力边界和未来发展方向。</p>
+                    <div class="article-meta">
+                        <span class="article-date">2024-01-30</span>
+                        <span class="article-tag">深度学习</span>
+                        <span class="article-tag">技术前沿</span>
+                    </div>
+                </div>
+                <div class="article-image" data-src="https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3"></div>
+            </article>
+        </section>
+    </main>
+
+    <!-- 更新分页和底部区域 -->
+    <div class="container">
+        <!-- 分页组件 -->
+        <div class="pagination">
+            <div class="page-controls">
+                <button class="page-btn prev-btn" disabled>上一页</button>
+                <div class="page-numbers">
+                    <button class="page-number active">1</button>
+                    <button class="page-number">2</button>
+                    <span class="page-ellipsis">...</span>
+                    <button class="page-number">5</button>
+                </div>
+                <button class="page-btn next-btn">下一页</button>
+            </div>
+            <div class="page-size">
+                <select class="page-size-select">
+                    <option value="10" selected>10条/页</option>
+                    <option value="20">20条/页</option>
+                    <option value="50">50条/页</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- 版权信息区域 -->
+        <div class="copyright-section">
+            <div class="copyright-divider"></div>
+            <p class="copyright-text">Copyright © 2017-2030 Yamir.Pang作者版权所有</p>
+        </div>
+
+        <!-- 底部区域 -->
+        <footer class="footer">
+            <div class="countdown-wrapper">
+                <div class="countdown-text">距离 <span class="highlight">ASI</span> 诞生还剩</div>
+                <div class="countdown-container">
+                    <div class="countdown-item">
+                        <div class="number" id="days">000</div>
+                        <div class="label">天</div>
+                    </div>
+                    <div class="countdown-item">
+                        <div class="number" id="hours">00</div>
+                        <div class="label">时</div>
+                    </div>
+                    <div class="countdown-item">
+                        <div class="number" id="minutes">00</div>
+                        <div class="label">分</div>
+                    </div>
+                    <div class="countdown-item">
+                        <div class="number" id="seconds">00</div>
+                        <div class="label">秒</div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- 添加 Font Awesome 图标 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- 复用主页的脚本 -->
+    <script src="main.js"></script>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        const navOverlay = document.querySelector('.nav-overlay');
+        
+        function toggleMenu() {
+            menuToggle.classList.toggle('active');
+            navLinks.classList.toggle('active');
+            navOverlay.classList.toggle('active');
+            document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+        }
+
+        menuToggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            toggleMenu();
+        });
+
+        navOverlay.addEventListener('click', toggleMenu);
+
+        // 点击链接后关闭菜单
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', toggleMenu);
+        });
+
+        // 添加触摸事件支持
+        menuToggle.addEventListener('touchend', function(e) {
+            e.preventDefault();
+            toggleMenu();
+        }, false);
+    });
+    </script>
+</body>
+</html> 

@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>个人 TED 风格网站</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="preload" as="image" href="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3" />
-    <meta http-equiv="Cache-Control" content="max-age=31536000" />
 </head>
 <body>
     <header>
@@ -21,7 +19,7 @@
             </button>
             <ul class="nav-links">
                 <li><a href="#home" class="active">主页</a></li>
-                <li><a href="articles.html">文章</a></li>
+                <li><a href="#articles">文章</a></li>
                 <li><a href="#about">关于</a></li>
                 <li><a href="https://github.com/YourUsername" target="_blank">GitHub</a></li>
             </ul>
@@ -34,7 +32,7 @@
             <div class="hero-content">
                 <h2>AI，新征途</h2>
                 <div class="countdown-wrapper">
-                    <div class="countdown-text">距离 <span class="highlight">ASI</span> 诞生还剩</div>
+                    <div class="countdown-text">距离ASI诞生还剩</div>
                     <div class="countdown-container">
                         <div class="countdown-item">
                             <div class="countdown-number" id="days">000</div>
@@ -58,17 +56,14 @@
         </section>
 
         <section class="featured-talks">
-            <h3>精选文章</h3>
+            <h3>精选演讲</h3>
             <div class="talks-grid">
                 <article class="talk-card">
-                    <div class="talk-content">
-                        <h4>出发，向着未来一路狂奔吧</h4>
-                        <p>已经没有退路了，请奋力一搏</p>
-                    </div>
-                    <div class="talk-image" role="img" aria-label="文章配图"
-                         data-src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3"></div>
+                    <img src="placeholder1.jpg" alt="演讲预览">
+                    <h4>演讲标题</h4>
+                    <p>演讲者姓名</p>
                 </article>
-                <!-- 可以添加更多文章卡片 -->
+                <!-- 更多演讲卡片 -->
             </div>
         </section>
     </main>
@@ -175,11 +170,21 @@
             const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((difference % (1000 * 60)) / 1000);
             
-            // 直接更新数字，不添加动画
-            document.getElementById('days').textContent = days.toString().padStart(3, '0');
-            document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
-            document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
-            document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+            // 更新显示并添加翻转动画
+            updateElement('days', days.toString().padStart(3, '0'));
+            updateElement('hours', hours.toString().padStart(2, '0'));
+            updateElement('minutes', minutes.toString().padStart(2, '0'));
+            updateElement('seconds', seconds.toString().padStart(2, '0'));
+        }
+        
+        function updateElement(id, newValue) {
+            const element = document.getElementById(id);
+            if (element.textContent !== newValue) {
+                element.classList.remove('flip');
+                void element.offsetWidth; // 触发重排以重启动画
+                element.classList.add('flip');
+                element.textContent = newValue;
+            }
         }
         
         // 立即更新一次
@@ -187,63 +192,6 @@
         
         // 每秒更新一次
         setInterval(updateCountdown, 1000);
-    });
-
-    document.addEventListener('DOMContentLoaded', function() {
-        // 图片缓存处理
-        const imageCache = new Map();
-        
-        function loadAndCacheImage(element) {
-            const src = element.dataset.src;
-            
-            // 检查是否已经有缓存
-            if (imageCache.has(src)) {
-                element.style.backgroundImage = `url('${imageCache.get(src)}')`;
-                return;
-            }
-            
-            // 加载并缓存图片
-            const img = new Image();
-            img.onload = function() {
-                imageCache.set(src, src);
-                element.style.backgroundImage = `url('${src}')`;
-                
-                // 将图片URL存储到localStorage中
-                try {
-                    localStorage.setItem('cached_image_' + src, src);
-                    localStorage.setItem('cached_image_time_' + src, Date.now().toString());
-                } catch (e) {
-                    console.log('Storage failed:', e);
-                }
-            };
-            img.src = src;
-        }
-        
-        // 从localStorage恢复缓存
-        function restoreCachedImages() {
-            for (let i = 0; i < localStorage.length; i++) {
-                const key = localStorage.key(i);
-                if (key.startsWith('cached_image_') && !key.includes('time')) {
-                    const src = localStorage.getItem(key);
-                    const time = parseInt(localStorage.getItem('cached_image_time_' + src) || '0');
-                    
-                    // 检查缓存是否过期（7天）
-                    if (Date.now() - time < 7 * 24 * 60 * 60 * 1000) {
-                        imageCache.set(src, src);
-                    } else {
-                        // 删除过期缓存
-                        localStorage.removeItem(key);
-                        localStorage.removeItem('cached_image_time_' + src);
-                    }
-                }
-            }
-        }
-        
-        // 初始化缓存
-        restoreCachedImages();
-        
-        // 加载所有图片
-        document.querySelectorAll('.talk-image[data-src]').forEach(loadAndCacheImage);
     });
     </script>
 </body>

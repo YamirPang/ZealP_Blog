@@ -1,0 +1,150 @@
+/* 文章页面基础样式优化 */
+.articles-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* 筛选区域样式 */
+.filter-section {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    margin-bottom: 2rem;
+}
+
+.filter-row {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+
+.filter-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.filter-label {
+    color: #666;
+    font-size: 0.9rem;
+    min-width: 70px;
+}
+
+.filter-input {
+    padding: 0.5rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.filter-input:focus {
+    border-color: #e62b1e;
+}
+
+.search-input {
+    width: 200px;
+}
+
+/* 文章卡片样式优化 */
+.article-card {
+    display: flex;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.article-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.article-content {
+    flex: 0.7;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.article-content h2 {
+    font-size: 1.4rem;
+    color: #333;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+}
+
+.article-description {
+    color: #666;
+    line-height: 1.6;
+    flex-grow: 1;
+    margin-bottom: 1rem;
+}
+
+.article-meta {
+    display: flex;
+    gap: 1rem;
+    color: #888;
+    font-size: 0.9rem;
+    align-items: center;
+}
+
+.article-tag {
+    background: #f0f0f0;
+    padding: 0.2rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    color: #666;
+}
+
+.article-tag.featured {
+    background: #ffe4e1;
+    color: #e62b1e;
+}
+
+/* 响应式布局优化 */
+@media screen and (max-width: 768px) {
+    .articles-container {
+        padding: 1rem;
+    }
+
+    .filter-row {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1rem;
+    }
+
+    .filter-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .filter-input {
+        width: 100%;
+    }
+
+    .search-input {
+        width: 100%;
+    }
+
+    .article-card {
+        flex-direction: row; /* 保持水平布局 */
+    }
+
+    .article-content {
+        flex: 0.8;
+        padding: 1rem;
+    }
+
+    .article-image {
+        flex: 0.2;
+        min-height: auto; /* 让高度自适应内容 */
+    }
+} 

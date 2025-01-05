@@ -1,0 +1,383 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.6;
+}
+
+/* 导航栏样式 */
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.logo h1 {
+    color: #e62b1e;
+    font-size: 1.8rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #e62b1e;
+}
+
+/* 主要内容区域样式 */
+.hero {
+    position: relative;
+    overflow: hidden;
+    height: 60vh;
+    background: linear-gradient(45deg, 
+        #000428, 
+        #000000,
+        #1a0030);
+    background-size: 200% 200%;
+    animation: gradientBG 15s ease infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.hero::before {
+    display: none;
+}
+
+/* 鼠标跟随的光效 */
+.mouse-light {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background: radial-gradient(circle, 
+        rgba(255, 255, 255, 0.4) 0%,
+        rgba(255, 255, 255, 0.2) 30%,
+        transparent 70%);
+    pointer-events: none;
+    mix-blend-mode: screen;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.3s;
+    filter: blur(3px);
+}
+
+.hero-content h2 {
+    position: relative;
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    color: #fff;
+    text-shadow: 
+        0 0 7px #fff,
+        0 0 10px #fff,
+        0 0 21px #fff,
+        0 0 42px #0fa,
+        0 0 82px #0fa,
+        0 0 92px #0fa,
+        0 0 102px #0fa,
+        0 0 151px #0fa;
+    animation: flicker 4s infinite alternate;
+}
+
+/* 闪烁动画 */
+@keyframes flicker {
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+        text-shadow:
+            0 0 7px #fff,
+            0 0 10px #fff,
+            0 0 21px #fff,
+            0 0 42px #0fa,
+            0 0 82px #0fa,
+            0 0 92px #0fa,
+            0 0 102px #0fa,
+            0 0 151px #0fa;
+    }
+    20%, 24%, 55% {
+        text-shadow: none;
+    }
+}
+
+/* 添加文字故障效果 */
+.hero-content h2::before,
+.hero-content h2::after {
+    content: 'AI，新征途';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+}
+
+.hero-content h2::before {
+    color: #ff00ff;
+    animation: glitch-1 2s infinite linear alternate-reverse;
+}
+
+.hero-content h2::after {
+    color: #00ffff;
+    animation: glitch-2 3s infinite linear alternate-reverse;
+}
+
+@keyframes glitch-1 {
+    0%, 100% { 
+        clip: rect(0, 900px, 2px, 0);
+        transform: translate(0);
+    }
+    20% {
+        clip: rect(0, 900px, 2px, 0);
+        transform: translate(-1px, 1px);
+    }
+    40% {
+        clip: rect(0, 900px, 2px, 0);
+        transform: translate(1px, -1px);
+    }
+    60% {
+        clip: rect(0, 900px, 2px, 0);
+        transform: translate(-1px, -1px);
+    }
+    80% {
+        clip: rect(0, 900px, 2px, 0);
+        transform: translate(1px, 1px);
+    }
+}
+
+@keyframes glitch-2 {
+    0%, 100% { 
+        clip: rect(0, 900px, 2px, 0);
+        transform: translate(0);
+    }
+    20% {
+        clip: rect(0, 900px, 2px, 0);
+        transform: translate(1px, 1px);
+    }
+    40% {
+        clip: rect(0, 900px, 2px, 0);
+        transform: translate(-1px, 1px);
+    }
+    60% {
+        clip: rect(0, 900px, 2px, 0);
+        transform: translate(1px, -1px);
+    }
+    80% {
+        clip: rect(0, 900px, 2px, 0);
+        transform: translate(-1px, -1px);
+    }
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2.5rem;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
+
+.cta-button {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    background-color: #e62b1e;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #cc261a;
+}
+
+/* 演讲卡片样式 */
+.featured-talks {
+    padding: 4rem 5%;
+}
+
+.talks-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.talk-card {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.talk-card:hover {
+    transform: translateY(-5px);
+}
+
+.talk-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.talk-card h4 {
+    padding: 1rem;
+    font-size: 1.2rem;
+}
+
+.talk-card p {
+    padding: 0 1rem 1rem;
+    color: #666;
+}
+
+/* 页脚样式 */
+footer {
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 3rem 5%;
+}
+
+.social-links {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.social-links a {
+    color: #fff;
+    text-decoration: none;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+.social-links a:hover {
+    opacity: 1;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    
+    .hero-content h2 {
+        font-size: 2.5rem;
+    }
+} 
+
+/* 当前页面菜单高亮 */
+.nav-links li a.active {
+    color: #e62b1e;
+}
+
+/* 底部样式更新 */
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+.social-icons {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.social-icons a {
+    color: #fff;
+    font-size: 1.5rem;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #e62b1e;
+    transform: translateY(-3px);
+}
+
+.copyright {
+    color: #888;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+/* 移除之前的社交链接相关样式 */
+.social-links {
+    display: none;
+}
+
+/* 移除之前的按钮样式 */
+.cta-button {
+    display: none;
+}
+
+/* 优化文字发光动画 */
+@keyframes textGlow {
+    0%, 100% {
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+                     0 0 20px rgba(255, 255, 255, 0.4),
+                     0 0 30px rgba(255, 255, 255, 0.2);
+    }
+    50% {
+        text-shadow: 0 0 20px rgba(255, 255, 255, 0.8),
+                     0 0 30px rgba(255, 255, 255, 0.4),
+                     0 0 40px rgba(255, 255, 255, 0.2);
+    }
+}
+
+.hero:hover .hero-content h2 {
+    animation: textGlow 2s ease-in-out infinite;
+}
+
+/* 新增文字光效容器 */
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.light-effect {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(circle, 
+        rgba(255, 255, 255, 0.8) 0%,
+        rgba(255, 255, 255, 0.2) 30%,
+        transparent 70%);
+    pointer-events: none;
+    opacity: 0;
+    mix-blend-mode: overlay;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.3s ease;
+}
+
+/* 文字发光效果的类 */
+.text-glow {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+                 0 0 20px rgba(255, 255, 255, 0.4),
+                 0 0 30px rgba(255, 255, 255, 0.2);
+} 
