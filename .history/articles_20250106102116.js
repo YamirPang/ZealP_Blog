@@ -1,21 +1,4 @@
 document.addEventListener('DOMContentLoaded', async function() {
-    // 移动端菜单
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navLinks = document.querySelector('.nav-links');
-    const navOverlay = document.querySelector('.nav-overlay');
-    
-    menuToggle.addEventListener('click', function() {
-        navLinks.classList.toggle('active');
-        navOverlay.classList.toggle('active');
-        this.classList.toggle('active');
-    });
-
-    navOverlay.addEventListener('click', function() {
-        navLinks.classList.remove('active');
-        navOverlay.classList.remove('active');
-        menuToggle.classList.remove('active');
-    });
-
     // 筛选区域展开/折叠功能
     const filterToggle = document.querySelector('.filter-toggle');
     const filterContent = document.querySelector('.filter-content');

@@ -1,40 +1,29 @@
-document.addEventListener('DOMContentLoaded', async function() {
-    // 移动端菜单
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navLinks = document.querySelector('.nav-links');
-    const navOverlay = document.querySelector('.nav-overlay');
-    
-    menuToggle.addEventListener('click', function() {
-        navLinks.classList.toggle('active');
-        navOverlay.classList.toggle('active');
-        this.classList.toggle('active');
-    });
+let currentPage = 1;
+let pageSize = 10;
 
-    navOverlay.addEventListener('click', function() {
-        navLinks.classList.remove('active');
-        navOverlay.classList.remove('active');
-        menuToggle.classList.remove('active');
-    });
-
+document.addEventListener('DOMContentLoaded', function() {
     // 筛选区域展开/折叠功能
     const filterToggle = document.querySelector('.filter-toggle');
     const filterContent = document.querySelector('.filter-content');
     
     filterToggle.addEventListener('click', function() {
+        filterContent.style.maxHeight = filterContent.style.maxHeight ? null : filterContent.scrollHeight + "px";
         filterContent.classList.toggle('active');
         this.classList.toggle('active');
     });
 
-    // 加载文章数据
     try {
-        const response = await fetch('../article/records.json');
-        if (!response.ok) {
-            throw new Error('Failed to fetch articles');
-        }
-        const data = await response.json();
-        renderArticles(data.articles);
+        // 初始化页面大小选择器的值
+        const pageSizeSelect = document.querySelector('.page-size-select');
+        pageSize = parseInt(pageSizeSelect.value);
+        
+        // 渲染文章列表
+        renderArticles(articlesData);
+        
+        // 绑定分页事件
+        bindPaginationEvents();
     } catch (error) {
-        console.error('Error loading articles:', error);
+        console.error('Error rendering articles:', error);
         document.querySelector('.articles-grid').innerHTML = 
             '<div class="error-message">加载文章列表失败，请稍后重试。</div>';
     }
@@ -48,7 +37,12 @@ function renderArticles(articles) {
         return;
     }
 
-    const articlesHTML = articles.map(article => {
+    // 计算当前页的文章
+    const start = (currentPage - 1) * pageSize;
+    const end = start + pageSize;
+    const pageArticles = articles.slice(start, end);
+
+    const articlesHTML = pageArticles.map(article => {
         const date = new Date(article.date).toLocaleDateString('zh-CN', {
             year: 'numeric',
             month: '2-digit',
@@ -59,6 +53,7 @@ function renderArticles(articles) {
             .map(tag => `<span class="article-tag">${tag}</span>`)
             .join('');
 
+        // 添加精选标签（现在放在标题前面）
         const selectedTag = article.type === 'selected' 
             ? '<span class="selected-tag"><i class="fas fa-crown"></i> 精选</span>' 
             : '';
@@ -73,11 +68,13 @@ function renderArticles(articles) {
                         ${tagsHTML}
                     </div>
                 </div>
+                <div class="article-image" ${article.image ? `style="background-image: url('${article.image}')"` : ''}></div>
             </article>
         `;
     }).join('');
 
     articlesGrid.innerHTML = articlesHTML;
+    updatePagination(articles.length);
 
     // 更新分页显示逻辑
     const pageSize = parseInt(document.querySelector('.page-size-select').value);

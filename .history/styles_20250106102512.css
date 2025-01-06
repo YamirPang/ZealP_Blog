@@ -35,17 +35,17 @@ body {
 .nav-links {
     display: flex;
     list-style: none;
-    gap: 1rem;
     margin-left: auto;
     margin-right: 0;
+    gap: 2em;
 }
 
-.nav-links a {
+.nav-links li a {
     text-decoration: none;
     color: #333;
     font-weight: 500;
     transition: color 0.3s;
-    padding: 0.5rem 1rem;
+    white-space: nowrap;
 }
 
 .nav-links a:hover {
@@ -591,13 +591,8 @@ footer {
     100% { opacity: 1; }
 } 
 
-/* 更新 logo 链接样式 */
+/* 添加 logo 链接样式 */
 .logo a {
     text-decoration: none;
-    color: inherit;
-}
-
-/* 移除 hover 效果 */
-.logo a:hover {
     color: inherit;
 }

@@ -459,43 +459,4 @@
         font-size: 0.7rem;
         margin-right: 0.2rem;
     }
-}
-
-/* 移动端菜单样式 */
-.nav-overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 98;
-}
-
-.nav-overlay.active {
-    display: block;
-}
-
-@media screen and (max-width: 768px) {
-    .nav-links {
-        position: fixed;
-        top: 0;
-        right: -250px;
-        width: 250px;
-        height: 100vh;
-        background: #fff;
-        padding: 60px 20px;
-        transition: right 0.3s ease;
-        z-index: 99;
-    }
-
-    .nav-links.active {
-        right: 0;
-    }
-
-    .menu-toggle {
-        display: block;
-        z-index: 100;
-    }
 } 

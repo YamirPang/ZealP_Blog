@@ -591,13 +591,12 @@ footer {
     100% { opacity: 1; }
 } 
 
-/* 更新 logo 链接样式 */
+/* 添加 logo 链接样式 */
 .logo a {
     text-decoration: none;
     color: inherit;
 }
 
-/* 移除 hover 效果 */
 .logo a:hover {
-    color: inherit;
+    color: #e62b1e;
 }
