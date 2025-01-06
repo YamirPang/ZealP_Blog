@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', async function() {
     const menuToggle = document.querySelector('.menu-toggle');
     const navLinks = document.querySelector('.nav-links');
     const navOverlay = document.querySelector('.nav-overlay');
-    
+
     menuToggle.addEventListener('click', function() {
         navLinks.classList.toggle('active');
         navOverlay.classList.toggle('active');
@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', async function() {
     // 筛选区域展开/折叠功能
     const filterToggle = document.querySelector('.filter-toggle');
     const filterContent = document.querySelector('.filter-content');
-    
+
     filterToggle.addEventListener('click', function() {
         filterContent.classList.toggle('active');
         this.classList.toggle('active');
@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', async function() {
 
     // 加载文章数据
     try {
-        const response = await fetch('../article/records.json');
+        const response = await fetch('./article/records.json');
         if (!response.ok) {
             throw new Error('Failed to fetch articles');
         }
@@ -35,14 +35,14 @@ document.addEventListener('DOMContentLoaded', async function() {
         renderArticles(data.articles);
     } catch (error) {
         console.error('Error loading articles:', error);
-        document.querySelector('.articles-grid').innerHTML = 
+        document.querySelector('.articles-grid').innerHTML =
             '<div class="error-message">加载文章列表失败，请稍后重试。</div>';
     }
 });
 
 function renderArticles(articles) {
     const articlesGrid = document.querySelector('.articles-grid');
-    
+
     if (!articles || articles.length === 0) {
         articlesGrid.innerHTML = '<div class="empty-message">暂无文章</div>';
         return;
@@ -59,8 +59,8 @@ function renderArticles(articles) {
             .map(tag => `<span class="article-tag">${tag}</span>`)
             .join('');
 
-        const selectedTag = article.type === 'selected' 
-            ? '<span class="selected-tag"><i class="fas fa-crown"></i> 精选</span>' 
+        const selectedTag = article.type === 'selected'
+            ? '<span class="selected-tag"><i class="fas fa-crown"></i> 精选</span>'
             : '';
 
         return `
@@ -82,7 +82,7 @@ function renderArticles(articles) {
     // 更新分页显示逻辑
     const pageSize = parseInt(document.querySelector('.page-size-select').value);
     const totalPages = Math.ceil(articles.length / pageSize);
-    
+
     const paginationElement = document.querySelector('.pagination');
     if (totalPages > 1) {
         paginationElement.classList.add('show');
@@ -142,4 +142,4 @@ function bindPaginationEvents() {
         currentPage = 1;
         renderArticles(articlesData);
     });
-} 
+}
