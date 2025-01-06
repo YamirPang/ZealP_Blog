@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', async function() {
         // 更新页面标题和文章标题
         document.title = `${articleTitle} - Yamir.Pang`;
         document.querySelector('.article-header h1').textContent = articleTitle;
-        
+
         // 格式化并显示日期
         if (articleDate) {
             const formattedDate = new Date(articleDate).toLocaleDateString('zh-CN', {
@@ -25,15 +25,15 @@ document.addEventListener('DOMContentLoaded', async function() {
         }
 
         // 加载文章内容
-        const mdResponse = await fetch(`../article/files/${articleId}.md`);
+        const mdResponse = await fetch(`./article/files/${articleId}.md`);
         if (!mdResponse.ok) {
             throw new Error('文章内容加载失败');
         }
         const markdown = await mdResponse.text();
-        
+
         // 处理 Markdown 中的图片路径
         const processedMarkdown = markdown.replace(
-            /!\[(.*?)\]\((.*?)\)/g, 
+            /!\[(.*?)\]\((.*?)\)/g,
             (match, alt, src) => {
                 // 如果是相对路径，添加基础路径
                 if (!src.startsWith('http') && !src.startsWith('/')) {
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', async function() {
                 return match;
             }
         );
-        
+
         // 渲染处理后的 Markdown 内容
         document.getElementById('article-content').innerHTML = marked.parse(processedMarkdown);
 
@@ -63,4 +63,4 @@ document.querySelector('.menu-toggle').addEventListener('click', function() {
     document.querySelector('.nav-links').classList.toggle('active');
     document.querySelector('.nav-overlay').classList.toggle('active');
     this.classList.toggle('active');
-}); 
+});
