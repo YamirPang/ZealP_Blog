@@ -300,10 +300,16 @@
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease-out;
+    opacity: 0;
+    visibility: hidden;
 }
 
 .filter-content.active {
-    max-height: 500px;
+    opacity: 1;
+    visibility: visible;
+    padding-top: 1.5rem;
+    margin-top: 1.5rem;
+    border-top: 1px solid #eee;
 }
 
 /* 版权信息区域样式 */
@@ -347,7 +353,7 @@
     background: #fff;
     border-top: 1px solid #eee;
     border-bottom: 1px solid #eee;
-    margin-bottom: 2px;
+    margin-bottom: 1.5rem;
     padding: 1.5rem 0;
     box-shadow: none;
 }
@@ -412,6 +418,6 @@
 @media screen and (max-width: 768px) {
     .article-card {
         padding: 1rem 0;
-        margin-bottom: 2px;
+        margin-bottom: 1rem;
     }
 } 

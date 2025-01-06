@@ -47,7 +47,25 @@
 .article-content img {
     max-width: 100%;
     height: auto;
+    border-radius: 8px;
     margin: 1rem 0;
+}
+
+.article-content h2 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.article-content p {
+    margin-bottom: 1rem;
+}
+
+.loading {
+    text-align: center;
+    color: #666;
+    padding: 2rem;
 }
 
 .error-message {

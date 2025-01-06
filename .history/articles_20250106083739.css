@@ -300,10 +300,16 @@
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease-out;
+    opacity: 0;
+    visibility: hidden;
 }
 
 .filter-content.active {
-    max-height: 500px;
+    opacity: 1;
+    visibility: visible;
+    padding-top: 1.5rem;
+    margin-top: 1.5rem;
+    border-top: 1px solid #eee;
 }
 
 /* 版权信息区域样式 */
@@ -345,47 +351,23 @@
     position: relative;
     display: flex;
     background: #fff;
-    border-top: 1px solid #eee;
-    border-bottom: 1px solid #eee;
-    margin-bottom: 2px;
-    padding: 1.5rem 0;
-    box-shadow: none;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
 }
 
 .selected-tag {
-    display: inline-flex;
-    align-items: center;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
     background-color: #e62b1e;
     color: white;
     padding: 0.2rem 0.5rem;
     border-radius: 3px;
     font-size: 0.75rem;
     font-weight: 500;
-    margin-right: 0.8rem;
-    vertical-align: middle;
-}
-
-.selected-tag i {
-    font-size: 0.8rem;
-    margin-right: 0.3rem;
-}
-
-/* 调整标题样式以适应内联标签 */
-.article-card h2 {
-    display: flex;
-    align-items: center;
-    margin-bottom: 0.8rem;
-}
-
-.article-card h2 a {
-    color: #333;
-    text-decoration: none;
-    font-size: 1.2rem;
-    line-height: 1.4;
-}
-
-.article-card h2 a:hover {
-    color: #e62b1e;
+    z-index: 2;
+    line-height: 1.2;
 }
 
 /* 确保图片区域样式正确 */
@@ -395,23 +377,4 @@
     min-width: 200px;
     background-size: cover;
     background-position: center;
-}
-
-/* 调整文章内容区域样式 */
-.article-content {
-    flex: 1;
-    padding-right: 1.5rem;
-}
-
-/* 确保最后一个卡片的底部边框显示 */
-.articles-grid .article-card:last-child {
-    margin-bottom: 0;
-}
-
-/* 响应式调整 */
-@media screen and (max-width: 768px) {
-    .article-card {
-        padding: 1rem 0;
-        margin-bottom: 2px;
-    }
 } 

@@ -1,12 +1,27 @@
 const articlesData = [
     {
-        "id": "20250105001",
-        "title": "2025年AI行业三大机会点",
-        "description": "百度这张AI成绩单，透出了2025年AI行业三大机会点",
-        "date": "2025-01-06 16:02",
-        "tags": ["AI应用", "智能体"],
-        "type": "selected",
+        "id": "1",
+        "title": "人工智能的未来展望",
+        "description": "探讨AI技术发展趋势和未来可能性",
+        "date": "2024-03-15 16:02",
+        "tags": ["人工智能", "技术前沿"],
         "image": "/images/ai-future.jpg"
+    },
+    {
+        "id": "2",
+        "title": "深度学习框架对比",
+        "description": "主流深度学习框架的优劣分析",
+        "date": "2024-03-10 16:02",
+        "tags": ["深度学习", "技术评测"],
+        "image": "/images/deep-learning.jpg"
+    },
+    {
+        "id": "3",
+        "title": "机器学习入门指南",
+        "description": "零基础入门机器学习的完整路线",
+        "date": "2024-03-05 16:02",
+        "tags": ["机器学习", "入门指南"],
+        "image": "/images/ml-guide.jpg"
     }
 ];
 
@@ -14,16 +29,6 @@ let currentPage = 1;
 let pageSize = 10;
 
 document.addEventListener('DOMContentLoaded', function() {
-    // 筛选区域展开/折叠功能
-    const filterToggle = document.querySelector('.filter-toggle');
-    const filterContent = document.querySelector('.filter-content');
-    
-    filterToggle.addEventListener('click', function() {
-        filterContent.style.maxHeight = filterContent.style.maxHeight ? null : filterContent.scrollHeight + "px";
-        filterContent.classList.toggle('active');
-        this.classList.toggle('active');
-    });
-
     try {
         // 初始化页面大小选择器的值
         const pageSizeSelect = document.querySelector('.page-size-select');
@@ -65,15 +70,10 @@ function renderArticles(articles) {
             .map(tag => `<span class="article-tag">${tag}</span>`)
             .join('');
 
-        // 添加精选标签（现在放在标题前面）
-        const selectedTag = article.type === 'selected' 
-            ? '<span class="selected-tag"><i class="fas fa-crown"></i> 精选</span>' 
-            : '';
-
         return `
             <article class="article-card">
                 <div class="article-content">
-                    <h2>${selectedTag}<a href="article.html?id=${article.id}&title=${encodeURIComponent(article.title)}&date=${encodeURIComponent(article.date)}">${article.title}</a></h2>
+                    <h2><a href="article.html?id=${article.id}">${article.title}</a></h2>
                     <p class="article-description">${article.description}</p>
                     <div class="article-meta">
                         <span class="article-date">${date}</span>

@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="article.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/marked@9.1.6/lib/marked.umd.min.js"></script>
 </head>
 <body>
     <!-- 导航栏 -->
@@ -24,7 +23,7 @@
             <li><a href="index.html">主页</a></li>
             <li><a href="articles.html">文章</a></li>
             <li><a href="#about">关于</a></li>
-            <li><a href="https://github.com/YamirPang" target="_blank">GitHub</a></li>
+            <li><a href="https://github.com/YourUsername" target="_blank">GitHub</a></li>
         </ul>
         <div class="nav-overlay"></div>
     </nav>
@@ -33,9 +32,10 @@
         <!-- 文章详情 -->
         <article class="article-detail">
             <div class="article-header">
-                <h1></h1>
+                <h1 id="article-title">加载中...</h1>
                 <div class="article-meta">
-                    <span class="article-date"></span>
+                    <span class="article-date" id="article-date"></span>
+                    <div class="article-tags" id="article-tags"></div>
                 </div>
             </div>
             <div class="article-content" id="article-content">
@@ -50,6 +50,7 @@
         </div>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script src="article.js"></script>
 </body>
 </html> 

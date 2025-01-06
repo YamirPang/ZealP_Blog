@@ -347,7 +347,7 @@
     background: #fff;
     border-top: 1px solid #eee;
     border-bottom: 1px solid #eee;
-    margin-bottom: 2px;
+    margin-bottom: 5px;
     padding: 1.5rem 0;
     box-shadow: none;
 }
@@ -412,6 +412,6 @@
 @media screen and (max-width: 768px) {
     .article-card {
         padding: 1rem 0;
-        margin-bottom: 2px;
+        margin-bottom: 5px;
     }
 } 
