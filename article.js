@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', async function() {
             (match, alt, src) => {
                 // 如果是相对路径，添加基础路径
                 if (!src.startsWith('http') && !src.startsWith('/')) {
-                    return `![${alt}](../article/files/${src})`;
+                    return `![${alt}](./article/files/${src})`;
                 }
                 return match;
             }
