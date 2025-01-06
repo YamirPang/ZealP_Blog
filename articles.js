@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', async function() {
 
     // 加载文章数据
     try {
-        const response = await fetch('/article/records.json');
+        const response = await fetch('./article/records.json');
         if (!response.ok) {
             throw new Error('Failed to fetch articles');
         }
